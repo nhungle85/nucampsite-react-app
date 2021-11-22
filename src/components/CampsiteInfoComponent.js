@@ -32,13 +32,14 @@ function RenderCampsite({campsite}) {
   );
 }
 
-function CampsiteInfo({campsite}) {
+function CampsiteInfo({campsite, comments}) {
+    console.log(campsite);
     if (campsite) {
       return (
         <div className="container">
           <div className="row">
             <RenderCampsite campsite={campsite}/>
-            <RenderComments comments={campsite.comments}/>
+            <RenderComments comments={comments}/>
           </div>
         </div>
       );
